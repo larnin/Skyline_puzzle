@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    Rigidbody rigidbody;
+
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
-
     float BaseDrag;
-    new Rigidbody rigidbody;
 
     void Awake()
     {
@@ -40,6 +41,13 @@ public class Player : MonoBehaviour
                 rigidbody.drag = DecceleratorDrag;
                 break;
 
+
+            case "AntiGravity":
+                rigidbody.drag = 0f;
+                rigidbody.useGravity = false;
+                break;
+
+
             default:
                 
                 break;
@@ -53,7 +61,9 @@ public class Player : MonoBehaviour
         {
             case "Accelerator":
             case "Deccelerator":
+            case "AntiGravity":
                 rigidbody.drag = BaseDrag;
+                rigidbody.useGravity = true; 
                 break;
 
 
