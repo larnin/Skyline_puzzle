@@ -5,12 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody;
 
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
-int size = 1;
-float BaseDrag;
+    int size = 1;
+    float BaseDrag;
 
     void Awake()
     {
@@ -46,8 +46,13 @@ float BaseDrag;
                 rigidbody.drag = 0f;
                 rigidbody.useGravity = false;
                 break;
-		default:
-                
+            case "End":
+                Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
+                break;
+            case "KillGrid":
+                Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
+                break;
+		    default:
                 break;
         }
 
