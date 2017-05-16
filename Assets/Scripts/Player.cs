@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
 
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
-    float BaseDrag;
+int size = 1;
+float BaseDrag;
 
     void Awake()
     {
@@ -30,7 +31,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        
         switch (other.tag)
         {
             case "Accelerator":
@@ -41,14 +42,11 @@ public class Player : MonoBehaviour
                 rigidbody.drag = DecceleratorDrag;
                 break;
 
-
             case "AntiGravity":
                 rigidbody.drag = 0f;
                 rigidbody.useGravity = false;
                 break;
-
-
-            default:
+		default:
                 
                 break;
         }
@@ -64,6 +62,32 @@ public class Player : MonoBehaviour
             case "AntiGravity":
                 rigidbody.drag = BaseDrag;
                 rigidbody.useGravity = true; 
+                break;
+            case "SizeUp":
+                if (size == 1)
+                {
+                    transform.localScale = new Vector3(2, 2, 1);
+                    size = 2;
+                }
+                else if (size == 0)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    size = 1;
+                }
+                break;
+
+            case "SizeLess":
+                if (size == 1)
+                {
+                    transform.localScale = new Vector3(0.4f, 0.4f, 1);
+                    size = 0;
+                }
+                else if (size == 2)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    size = 1;
+                }
+
                 break;
 
 

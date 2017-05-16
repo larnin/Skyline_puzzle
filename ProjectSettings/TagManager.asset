@@ -8,6 +8,7 @@ TagManager:
   - SizeLess
   - Accelerator
   - Deccelerator
+  - SizeUp
   layers:
   - Default
   - TransparentFX
