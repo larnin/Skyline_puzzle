@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    void Awake()
+    {
+        G.Sys.player = this;
+    }
+
 	void Start ()
     {
 		
