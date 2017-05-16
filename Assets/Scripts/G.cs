@@ -9,6 +9,7 @@ public sealed class G
     private static volatile G _instance;
     private Player _player;
     private GameManager _gameManager;
+    private bool _paused = false;
 
     public static G Sys
     {
@@ -40,5 +41,11 @@ public sealed class G
                 DebugConsole.Log("2 Gamemanager instanciated !");
             _gameManager = value;
         }
+    }
+
+    public bool paused
+    {
+        get { return _paused; }
+        set { _paused = value; }
     }
 }

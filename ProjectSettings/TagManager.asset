@@ -9,6 +9,8 @@ TagManager:
   - Accelerator
   - Deccelerator
   - SizeUp
+  - End
+  - KillGrid
   layers:
   - Default
   - TransparentFX

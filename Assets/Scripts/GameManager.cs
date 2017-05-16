@@ -8,6 +8,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject dieMenuPrefab;
+    public GameObject endMenuPrefab;
+    public List<string> levelsName;
+
+    [HideInInspector]
+    public int index = 0;
+
     SubscriberList _subscriberList = new SubscriberList();
 
     void Awake()
@@ -16,6 +23,8 @@ public class GameManager : MonoBehaviour
 
         _subscriberList.Add(new Event<PlayerDieEvent>.Subscriber(onPlayerDie));
         _subscriberList.Add(new Event<EndLevelEvent>.Subscriber(onPlayerFinish));
+        _subscriberList.Add(new Event<GoToMenuEvent>.Subscriber(onGoToMain));
+        _subscriberList.Add(new Event<LoadLevelEvent>.Subscriber(onLoadLevel));
         _subscriberList.Subscribe();
     }
 
@@ -38,18 +47,35 @@ public class GameManager : MonoBehaviour
             action.Invoke();
     }
 
-    public void LoadLevel(string level)
+    public void LoadLevel(int _index)
     {
-        LoadScene(level, null);
+        if (index < 0 || index >= levelsName.Count)
+        {
+            DebugConsole.Log("Level index invalid");
+            return;
+        }
+        index = _index;
+        LoadScene(levelsName[index], null);
     }
 
     void onPlayerDie(PlayerDieEvent e)
     {
-
+        Instantiate(dieMenuPrefab);
     }
 
     void onPlayerFinish(EndLevelEvent e)
     {
+        Instantiate(endMenuPrefab);
+    }
+
+    void onLoadLevel(LoadLevelEvent e)
+    {
 
     }
+
+    void onGoToMain(GoToMenuEvent e)
+    {
+
+    }
+    
 }

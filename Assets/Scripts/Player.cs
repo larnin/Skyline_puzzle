@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     new Rigidbody rigidbody;
 
     public float AcceleratorDrag = 1f;
