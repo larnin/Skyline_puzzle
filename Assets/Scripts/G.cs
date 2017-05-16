@@ -8,6 +8,7 @@ public sealed class G
 {
     private static volatile G _instance;
     private Player _player;
+    private GameManager _gameManager;
 
     public static G Sys
     {
@@ -27,6 +28,17 @@ public sealed class G
             if (_player != null)
                 DebugConsole.Log("2 Players instanciated !");
             _player = value;
+        }
+    }
+
+    public GameManager gameManager
+    {
+        get { return _gameManager; }
+        set
+        {
+            if (_gameManager != null)
+                DebugConsole.Log("2 Gamemanager instanciated !");
+            _gameManager = value;
         }
     }
 }
