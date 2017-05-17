@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    new Rigidbody rigidbody;
+
+    Rigidbody rigidbody;
 
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
-    int size = 1;
-    float BaseDrag;
+int size = 1;
+float BaseDrag;
 
     void Awake()
     {
@@ -45,13 +46,11 @@ public class Player : MonoBehaviour
                 rigidbody.drag = 0f;
                 rigidbody.useGravity = false;
                 break;
-            case "End":
-                Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
+            case "WormholeIn":
+                transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
                 break;
-            case "KillGrid":
-                Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
-                break;
-		    default:
+		default:
+                
                 break;
         }
 

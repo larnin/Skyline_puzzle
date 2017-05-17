@@ -10,6 +10,7 @@ public sealed class G
     private Player _player;
     private GameManager _gameManager;
     private bool _paused = false;
+    private PlayerData _playerData = new PlayerData();
 
     public static G Sys
     {
@@ -47,5 +48,10 @@ public sealed class G
     {
         get { return _paused; }
         set { _paused = value; }
+    }
+
+    public PlayerData playerData
+    {
+        get { return _playerData; }
     }
 }

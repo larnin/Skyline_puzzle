@@ -6,11 +6,15 @@ public class GyroGravity : MonoBehaviour
 {
     public float multiplier = 1;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         Input.gyro.enabled = true;
     }
-
 
     void Update ()
     {

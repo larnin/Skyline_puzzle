@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         G.Sys.gameManager = this;
 
         _subscriberList.Add(new Event<PlayerDieEvent>.Subscriber(onPlayerDie));
