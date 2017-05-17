@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
 
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
+    public float GravityAttract = 35f;
+
     int size = 1;
     float BaseDrag;
+
 
     void Awake()
     {
@@ -50,7 +53,7 @@ public class Player : MonoBehaviour
                 Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
                 break;
             case "WormholeIn":
-                transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
+                //transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
                 break;
             case "SizeUp":
                 transform.localScale = new Vector3(2, 2, 1);
@@ -61,6 +64,15 @@ public class Player : MonoBehaviour
             case "SizeMiddle":
                 transform.localScale = new Vector3(1, 1, 1);
                 break;
+
+            case "DefineGravity":
+                rigidbody.useGravity = false;
+                //rigidbody.AddForce(other.transform.GetChild(0).forward *1000f);
+                ConstantForce e = gameObject.AddComponent<ConstantForce>();
+                e.force = other.transform.GetChild(0).forward * GravityAttract;
+                print(other.transform.GetChild(0).forward);
+                break;
+
             default:
                 break;
         }
@@ -71,6 +83,12 @@ public class Player : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "DefineGravity":
+                Destroy(GetComponent<ConstantForce>());
+                rigidbody.useGravity = true;
+
+                break;
+
             case "Accelerator":
             case "Deccelerator":
             case "AntiGravity":
