@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour
 {
     public GameObject dieMenuPrefab;
     public GameObject endMenuPrefab;
+    public GameObject pauseMenuPrefab;
     public List<string> levelsName;
     public string mainMenuScene;
+    public string levelSelectScene;
 
     [HideInInspector]
     public int index = 0;
@@ -28,7 +30,13 @@ public class GameManager : MonoBehaviour
         _subscriberList.Add(new Event<EndLevelEvent>.Subscriber(onPlayerFinish));
         _subscriberList.Add(new Event<GoToMenuEvent>.Subscriber(onGoToMain));
         _subscriberList.Add(new Event<LoadLevelEvent>.Subscriber(onLoadLevel));
+        _subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         _subscriberList.Subscribe();
+    }
+
+    void Start()
+    {
+        LoadScene(mainMenuScene);
     }
 
     void OnDestroy()
@@ -38,12 +46,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string scene, Action action = null, LoadSceneMode mode = LoadSceneMode.Single)
     {
-        LoadSceneCoroutine(scene, action, mode);
+        StartCoroutine(LoadSceneCoroutine(scene, action, mode));
     }
 
-    IEnumerable LoadSceneCoroutine(string scene, Action action, LoadSceneMode mode)
+    IEnumerator LoadSceneCoroutine(string scene, Action action, LoadSceneMode mode)
     {
         var task = SceneManager.LoadSceneAsync(scene, mode);
+        task.allowSceneActivation = true;
         while (!task.isDone)
             yield return new WaitForEndOfFrame();
         if (action != null)
@@ -82,9 +91,17 @@ public class GameManager : MonoBehaviour
         LoadScene(mainMenuScene);
     }
     
+    void onPause(PauseEvent e)
+    {
+        Debug.Log("Pause");
+        G.Sys.paused = e.pausing;
+        if (e.pausing)
+            Instantiate(pauseMenuPrefab);
+    }
 
     void startLevel()
     {
-        G.Sys.paused = false;
+        G.Sys.paused = true;
+        Event<StartCountdownEvent>.Broadcast(new StartCountdownEvent());
     }
 }
