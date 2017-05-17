@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
-    Rigidbody rigidbody;
-
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
-int size = 1;
-float BaseDrag;
+    public float GravityAttract = 35f;
+
+    new Rigidbody rigidbody;
+    int size = 1;
+    float BaseDrag;
+
 
     void Awake()
     {
@@ -37,11 +38,9 @@ float BaseDrag;
             case "Accelerator":
                 rigidbody.drag = AcceleratorDrag;
                 break;
-
             case "Deccelerator":
                 rigidbody.drag = DecceleratorDrag;
                 break;
-
             case "AntiGravity":
                 rigidbody.drag = 0f;
                 rigidbody.useGravity = false;
@@ -49,8 +48,25 @@ float BaseDrag;
             case "WormholeIn":
                 transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
                 break;
-		default:
-                
+                break;
+            case "SizeUp":
+                transform.localScale = new Vector3(2, 2, 1);
+                break;
+            case "SizeLess":
+                transform.localScale = new Vector3(0.4f, 0.4f, 1);
+                break;
+            case "SizeMiddle":
+                transform.localScale = new Vector3(1, 1, 1);
+                break;
+
+            case "DefineGravity":
+                rigidbody.useGravity = false;
+                //rigidbody.AddForce(other.transform.GetChild(0).forward *1000f);
+                ConstantForce e = gameObject.AddComponent<ConstantForce>();
+                e.force = other.transform.GetChild(0).forward * GravityAttract;
+                print(other.transform.GetChild(0).forward);
+                break;
+            default:
                 break;
         }
 
@@ -60,39 +76,19 @@ float BaseDrag;
     {
         switch (other.tag)
         {
+            case "DefineGravity":
+                Destroy(GetComponent<ConstantForce>());
+                rigidbody.useGravity = true;
+
+                break;
+
             case "Accelerator":
             case "Deccelerator":
             case "AntiGravity":
                 rigidbody.drag = BaseDrag;
                 rigidbody.useGravity = true; 
                 break;
-            case "SizeUp":
-                if (size == 1)
-                {
-                    transform.localScale = new Vector3(2, 2, 1);
-                    size = 2;
-                }
-                else if (size == 0)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                    size = 1;
-                }
-                break;
-
-            case "SizeLess":
-                if (size == 1)
-                {
-                    transform.localScale = new Vector3(0.4f, 0.4f, 1);
-                    size = 0;
-                }
-                else if (size == 2)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                    size = 1;
-                }
-
-                break;
-
+            
 
             default:
 
