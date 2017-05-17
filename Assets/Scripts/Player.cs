@@ -49,10 +49,10 @@ public class Player : MonoBehaviour
                 transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
                 break;
             case "SizeUp":
-                transform.localScale = new Vector3(2, 2, 1);
+                transform.localScale = new Vector3(2, 2, 2);
                 break;
             case "SizeLess":
-                transform.localScale = new Vector3(0.4f, 0.4f, 1);
+                transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
                 break;
             case "SizeMiddle":
                 transform.localScale = new Vector3(1, 1, 1);
@@ -64,6 +64,12 @@ public class Player : MonoBehaviour
                 break;
             case "Trigger":
                 other.gameObject.GetComponent<Trigger>().ActivatedElement.GetComponent<ActivatedElement>().Activate();
+                break;
+            case "KillGrid":
+                Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
+                break;
+            case "End":
+                Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
                 break;
             default:
                 break;
