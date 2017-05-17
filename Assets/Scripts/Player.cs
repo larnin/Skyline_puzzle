@@ -48,7 +48,6 @@ public class Player : MonoBehaviour
             case "WormholeIn":
                 transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
                 break;
-                break;
             case "SizeUp":
                 transform.localScale = new Vector3(2, 2, 1);
                 break;
@@ -58,13 +57,13 @@ public class Player : MonoBehaviour
             case "SizeMiddle":
                 transform.localScale = new Vector3(1, 1, 1);
                 break;
-
             case "DefineGravity":
                 rigidbody.useGravity = false;
-                //rigidbody.AddForce(other.transform.GetChild(0).forward *1000f);
                 ConstantForce e = gameObject.AddComponent<ConstantForce>();
                 e.force = other.transform.GetChild(0).forward * GravityAttract;
-                print(other.transform.GetChild(0).forward);
+                break;
+            case "Trigger":
+                other.gameObject.GetComponent<Trigger>().ActivatedElement.GetComponent<ActivatedElement>().Activate();
                 break;
             default:
                 break;
