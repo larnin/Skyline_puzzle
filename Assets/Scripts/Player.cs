@@ -36,11 +36,9 @@ public class Player : MonoBehaviour
             case "Accelerator":
                 rigidbody.drag = AcceleratorDrag;
                 break;
-
             case "Deccelerator":
                 rigidbody.drag = DecceleratorDrag;
                 break;
-
             case "AntiGravity":
                 rigidbody.drag = 0f;
                 rigidbody.useGravity = false;
@@ -51,7 +49,19 @@ public class Player : MonoBehaviour
             case "KillGrid":
                 Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
                 break;
-		    default:
+            case "WormholeIn":
+                transform.position = other.gameObject.GetComponent<WormholeIn>().WormholeOut.transform.position;
+                break;
+            case "SizeUp":
+                transform.localScale = new Vector3(2, 2, 1);
+                break;
+            case "SizeLess":
+                transform.localScale = new Vector3(0.4f, 0.4f, 1);
+                break;
+            case "SizeMiddle":
+                transform.localScale = new Vector3(1, 1, 1);
+                break;
+            default:
                 break;
         }
 
@@ -67,33 +77,7 @@ public class Player : MonoBehaviour
                 rigidbody.drag = BaseDrag;
                 rigidbody.useGravity = true; 
                 break;
-            case "SizeUp":
-                if (size == 1)
-                {
-                    transform.localScale = new Vector3(2, 2, 1);
-                    size = 2;
-                }
-                else if (size == 0)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                    size = 1;
-                }
-                break;
-
-            case "SizeLess":
-                if (size == 1)
-                {
-                    transform.localScale = new Vector3(0.4f, 0.4f, 1);
-                    size = 0;
-                }
-                else if (size == 2)
-                {
-                    transform.localScale = new Vector3(1, 1, 1);
-                    size = 1;
-                }
-
-                break;
-
+            
 
             default:
 
