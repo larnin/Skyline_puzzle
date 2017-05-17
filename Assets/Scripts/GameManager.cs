@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject dieMenuPrefab;
     public GameObject endMenuPrefab;
     public List<string> levelsName;
+    public string mainMenuScene;
 
     [HideInInspector]
     public int index = 0;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         _subscriberList.Unsubscribe();
     }
 
-    public void LoadScene(string scene, Action action, LoadSceneMode mode = LoadSceneMode.Single)
+    public void LoadScene(string scene, Action action = null, LoadSceneMode mode = LoadSceneMode.Single)
     {
         LoadSceneCoroutine(scene, action, mode);
     }
@@ -57,7 +58,8 @@ public class GameManager : MonoBehaviour
             return;
         }
         index = _index;
-        LoadScene(levelsName[index], null);
+        G.Sys.paused = true;
+        LoadScene(levelsName[index], startLevel);
     }
 
     void onPlayerDie(PlayerDieEvent e)
@@ -72,12 +74,17 @@ public class GameManager : MonoBehaviour
 
     void onLoadLevel(LoadLevelEvent e)
     {
-
+        LoadLevel(e.index);
     }
 
     void onGoToMain(GoToMenuEvent e)
     {
-
+        LoadScene(mainMenuScene);
     }
     
+
+    void startLevel()
+    {
+        G.Sys.paused = false;
+    }
 }
