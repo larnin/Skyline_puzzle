@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenuPrefab;
     public List<string> levelsName;
     public string mainMenuScene;
+    public string levelSelectScene;
 
     [HideInInspector]
     public int index = 0;
@@ -33,6 +34,11 @@ public class GameManager : MonoBehaviour
         _subscriberList.Subscribe();
     }
 
+    void Start()
+    {
+        LoadScene(mainMenuScene);
+    }
+
     void OnDestroy()
     {
         _subscriberList.Unsubscribe();
@@ -40,12 +46,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string scene, Action action = null, LoadSceneMode mode = LoadSceneMode.Single)
     {
-        LoadSceneCoroutine(scene, action, mode);
+        StartCoroutine(LoadSceneCoroutine(scene, action, mode));
     }
 
-    IEnumerable LoadSceneCoroutine(string scene, Action action, LoadSceneMode mode)
+    IEnumerator LoadSceneCoroutine(string scene, Action action, LoadSceneMode mode)
     {
         var task = SceneManager.LoadSceneAsync(scene, mode);
+        task.allowSceneActivation = true;
         while (!task.isDone)
             yield return new WaitForEndOfFrame();
         if (action != null)
@@ -86,6 +93,7 @@ public class GameManager : MonoBehaviour
     
     void onPause(PauseEvent e)
     {
+        Debug.Log("Pause");
         G.Sys.paused = e.pausing;
         if (e.pausing)
             Instantiate(pauseMenuPrefab);
