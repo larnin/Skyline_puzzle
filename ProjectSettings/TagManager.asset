@@ -15,6 +15,9 @@ TagManager:
   - KillGrid
   - SizeMiddle
   - Trigger
+  - DefineGravity
+  - A
+  - B
   layers:
   - Default
   - TransparentFX
