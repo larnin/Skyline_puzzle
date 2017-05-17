@@ -61,6 +61,9 @@ public class Player : MonoBehaviour
             case "SizeMiddle":
                 transform.localScale = new Vector3(1, 1, 1);
                 break;
+            case "Trigger":
+                other.gameObject.GetComponent<Trigger>().ActivatedElement.GetComponent<ActivatedElement>().Activate();
+                break;
             default:
                 break;
         }
