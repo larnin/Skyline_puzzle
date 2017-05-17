@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject dieMenuPrefab;
     public GameObject endMenuPrefab;
+    public GameObject pauseMenuPrefab;
     public List<string> levelsName;
     public string mainMenuScene;
 
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
         _subscriberList.Add(new Event<EndLevelEvent>.Subscriber(onPlayerFinish));
         _subscriberList.Add(new Event<GoToMenuEvent>.Subscriber(onGoToMain));
         _subscriberList.Add(new Event<LoadLevelEvent>.Subscriber(onLoadLevel));
+        _subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         _subscriberList.Subscribe();
     }
 
@@ -82,9 +84,16 @@ public class GameManager : MonoBehaviour
         LoadScene(mainMenuScene);
     }
     
+    void onPause(PauseEvent e)
+    {
+        G.Sys.paused = e.pausing;
+        if (e.pausing)
+            Instantiate(pauseMenuPrefab);
+    }
 
     void startLevel()
     {
-        G.Sys.paused = false;
+        G.Sys.paused = true;
+        Event<StartCountdownEvent>.Broadcast(new StartCountdownEvent());
     }
 }
