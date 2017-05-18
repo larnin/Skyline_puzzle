@@ -86,7 +86,9 @@ public class Player : MonoBehaviour
                 rigidbody.useGravity = true;
 
                 break;
-
+            case "OneWay":
+                other.GetComponent<BoxCollider>().isTrigger = false;
+                break;
             case "Accelerator":
             case "Deccelerator":
             case "AntiGravity":
