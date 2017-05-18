@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class EndMenu : MonoBehaviour
 {
+    void Start()
+    {
+        if(G.Sys.gameManager.index >= G.Sys.gameManager.levelsName.Count-1)
+        {
+            var item = transform.FindChild("Next");
+            if (item != null)
+                item.gameObject.SetActive(false);
+        }
+    }
+
     public void OnRetryClick()
     {
         Event<LoadLevelEvent>.Broadcast(new LoadLevelEvent(G.Sys.gameManager.index));

@@ -118,7 +118,7 @@ Prefab:
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
       propertyPath: levelsName.Array.size
-      value: 4
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4674165286553584, guid: 0686c58d8b99a8348bb631c29abd1266, type: 2}
       propertyPath: m_LocalPosition.x
@@ -165,6 +165,241 @@ Prefab:
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
       propertyPath: levelsName.Array.data[3]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[0]
+      value: levelDesignJu_Easy_sizeChange_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[4]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[5]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[6]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[7]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[8]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[9]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[10]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[11]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[12]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[13]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[14]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[15]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[16]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[17]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[18]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[19]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[20]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[21]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[22]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[23]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[24]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[25]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[26]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[27]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[28]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[29]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[30]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[31]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[32]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[33]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[34]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[35]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[36]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[37]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[38]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[39]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[40]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[41]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[42]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[43]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[44]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[45]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[46]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[47]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[48]
+      value: Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[49]
       value: Scene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
