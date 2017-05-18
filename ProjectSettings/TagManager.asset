@@ -18,6 +18,8 @@ TagManager:
   - DefineGravity
   - A
   - B
+  - DefineGravity
+  - OneWay
   layers:
   - Default
   - TransparentFX
