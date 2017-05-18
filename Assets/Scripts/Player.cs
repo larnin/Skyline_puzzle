@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
 	void Start ()
     {
-        var perso = transform.FindChild("Perso");
+        var perso = transform.Find("Perso");
         if (perso != null)
             _animator = perso.GetComponent<Animator>();
 	}

@@ -24,17 +24,17 @@ public class LevelSelectMenu : MonoBehaviour
         {
             if (i > PlayerData.competenceNames.Count)
                 break;
-            var b = transform.FindChild("C" + i.ToString());
+            var b = transform.Find("C" + i.ToString());
             if (b == null)
                 break;
             if (!G.Sys.playerData.IsEnabled(PlayerData.competenceNames[i-1]))
                 b.gameObject.SetActive(false);
         }
 
-        var bArrow = transform.FindChild("Next");
+        var bArrow = transform.Find("Next");
         if (bArrow != null)
             nextButton = bArrow.gameObject;
-        bArrow = transform.FindChild("Previous");
+        bArrow = transform.Find("Previous");
         if (bArrow != null)
             previousButton = bArrow.gameObject;
 
@@ -57,7 +57,7 @@ public class LevelSelectMenu : MonoBehaviour
             b.transform.SetParent(transform);
             b.transform.localScale = new Vector3(1, 1, 1);
             b.transform.localPosition = new Vector3(buttonOffsetX * (i % buttonLineCount - ((float)buttonLineCount - 1) / 2), -buttonOffsetY * (i / 3) + buttonVerticalOffset, 0);
-            var child = b.transform.FindChild("Text");
+            var child = b.transform.Find("Text");
             if (child != null)
             {
                 var text = child.GetComponent<Text>();

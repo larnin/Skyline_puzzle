@@ -9,7 +9,7 @@ public class EndMenu : MonoBehaviour
         G.Sys.paused = true;
         if(G.Sys.gameManager.index >= G.Sys.gameManager.levelsName.Count-1)
         {
-            var item = transform.FindChild("Next");
+            var item = transform.Find("Next");
             if (item != null)
                 item.gameObject.SetActive(false);
         }

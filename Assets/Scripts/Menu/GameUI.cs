@@ -24,7 +24,7 @@ public class GameUI : MonoBehaviour
 
     void Start ()
     {
-        var txtObj = transform.FindChild("Countdown");
+        var txtObj = transform.Find("Countdown");
         if (txtObj != null)
             _countdown = txtObj.GetComponent<Text>();
         if (_countdown != null)
