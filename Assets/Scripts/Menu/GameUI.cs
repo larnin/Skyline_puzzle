@@ -13,6 +13,7 @@ public class GameUI : MonoBehaviour
     {
         _subscriberList.Add(new Event<StartCountdownEvent>.Subscriber(onCountdownStart));
         _subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
+        _subscriberList.Add(new Event<EndLevelEvent>.Subscriber(onPlayerFinish));
         _subscriberList.Subscribe();
     }
 
@@ -61,5 +62,10 @@ public class GameUI : MonoBehaviour
     void onPause(PauseEvent e)
     {
         _pauseButton.gameObject.SetActive(!e.pausing);
+    }
+
+    void onPlayerFinish(EndLevelEvent e)
+    {
+        _pauseButton.gameObject.SetActive(false);
     }
 }

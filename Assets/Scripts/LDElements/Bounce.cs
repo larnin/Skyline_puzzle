@@ -11,7 +11,7 @@ public class Bounce : MonoBehaviour {
         if (_hit.gameObject.tag.Contains("Player"))
         {
             ContactPoint contact = _hit.contacts[0];
-            _hit.rigidbody.AddForce(contact.normal * -1 * bounceStrenght * _hit.relativeVelocity.magnitude);
+            _hit.rigidbody.AddForce(Vector3.Reflect(_hit.relativeVelocity, _hit.contacts[0].normal).normalized * bounceStrenght * _hit.relativeVelocity.magnitude);
         }
     }
 }

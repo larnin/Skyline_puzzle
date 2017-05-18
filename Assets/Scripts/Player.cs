@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     int size = 1;
     float BaseDrag;
 
+    Animator _animator;
+
 
     void Awake()
     {
@@ -22,12 +24,16 @@ public class Player : MonoBehaviour
 
 	void Start ()
     {
-		
+        var perso = transform.FindChild("Perso");
+        if (perso != null)
+            _animator = perso.GetComponent<Animator>();
 	}
 	
 	void Update ()
     {
-		
+        if(rigidbody.velocity.magnitude > 0.01)
+            rigidbody.MoveRotation(Quaternion.LookRotation(new Vector3(0, 0, 1), -rigidbody.velocity));
+        //transform.up = - rigidbody.velocity;
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +72,7 @@ public class Player : MonoBehaviour
                 other.gameObject.GetComponent<Trigger>().ActivatedElement.GetComponent<ActivatedElement>().Activate();
                 break;
             case "KillGrid":
+                _animator.SetBool("Death", true);
                 Event<PlayerDieEvent>.Broadcast(new PlayerDieEvent());
                 break;
             case "End":

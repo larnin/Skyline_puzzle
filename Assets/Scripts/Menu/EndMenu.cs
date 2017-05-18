@@ -6,6 +6,7 @@ public class EndMenu : MonoBehaviour
 {
     void Start()
     {
+        G.Sys.paused = true;
         if(G.Sys.gameManager.index >= G.Sys.gameManager.levelsName.Count-1)
         {
             var item = transform.FindChild("Next");
