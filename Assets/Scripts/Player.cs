@@ -71,6 +71,10 @@ public class Player : MonoBehaviour
             case "End":
                 Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
                 break;
+
+  
+
+
             default:
                 break;
         }
@@ -93,7 +97,10 @@ public class Player : MonoBehaviour
                 rigidbody.drag = BaseDrag;
                 rigidbody.useGravity = true; 
                 break;
-            
+
+            case "OneWay":
+                other.GetComponent<BoxCollider>().isTrigger = false;
+                break;
 
             default:
 
