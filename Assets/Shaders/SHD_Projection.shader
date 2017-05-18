@@ -3,7 +3,7 @@
 // Shader created with Shader Forge v1.32 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.32;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:1,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:7446,x:33108,y:32772,varname:node_7446,prsc:2|diff-8840-RGB,spec-3019-OUT,gloss-5759-OUT;n:type:ShaderForge.SFN_Multiply,id:324,x:31856,y:32784,varname:node_324,prsc:2|A-4415-XYZ,B-2517-OUT;n:type:ShaderForge.SFN_ValueProperty,id:2517,x:31608,y:32866,ptovrint:False,ptlb:Tiling,ptin:_Tiling,varname:node_2517,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_Tex2d,id:8840,x:32569,y:32802,ptovrint:False,ptlb:Texture,ptin:_Texture,varname:node_8840,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-9325-OUT;n:type:ShaderForge.SFN_Slider,id:3019,x:32569,y:32975,ptovrint:False,ptlb:Metal,ptin:_Metal,varname:node_3019,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:1,max:1;n:type:ShaderForge.SFN_Slider,id:5759,x:32565,y:33147,ptovrint:False,ptlb:Roughness,ptin:_Roughness,varname:node_5759,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4415,x:31608,y:32714,varname:node_4415,prsc:2;n:type:ShaderForge.SFN_ComponentMask,id:9325,x:32030,y:32784,varname:node_9325,prsc:2,cc1:0,cc2:1,cc3:-1,cc4:-1|IN-324-OUT;proporder:2517-8840-3019-5759;pass:END;sub:END;*/
+/*SF_DATA;ver:1.32;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:1,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:True,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:7446,x:33108,y:32772,varname:node_7446,prsc:2|diff-8840-RGB,spec-3019-OUT,gloss-5759-OUT;n:type:ShaderForge.SFN_Multiply,id:324,x:31856,y:32784,varname:node_324,prsc:2|A-4415-XYZ,B-2517-OUT;n:type:ShaderForge.SFN_ValueProperty,id:2517,x:31608,y:32866,ptovrint:False,ptlb:Tiling,ptin:_Tiling,varname:node_2517,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_Tex2d,id:8840,x:32569,y:32802,ptovrint:False,ptlb:Texture,ptin:_Texture,varname:node_8840,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-9325-OUT;n:type:ShaderForge.SFN_Slider,id:3019,x:32569,y:32975,ptovrint:False,ptlb:Metal,ptin:_Metal,varname:node_3019,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:1,max:1;n:type:ShaderForge.SFN_Slider,id:5759,x:32565,y:33147,ptovrint:False,ptlb:Roughness,ptin:_Roughness,varname:node_5759,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_FragmentPosition,id:4415,x:31608,y:32714,varname:node_4415,prsc:2;n:type:ShaderForge.SFN_ComponentMask,id:9325,x:32030,y:32784,varname:node_9325,prsc:2,cc1:0,cc2:1,cc3:-1,cc4:-1|IN-324-OUT;proporder:2517-8840-3019-5759;pass:END;sub:END;*/
 
 Shader "Custom/SHD_Projection" {
     Properties {
@@ -34,8 +34,8 @@ Shader "Custom/SHD_Projection" {
             #include "UnityStandardBRDF.cginc"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
+            #pragma target 2.0
             uniform float _Tiling;
             uniform sampler2D _Texture; uniform float4 _Texture_ST;
             uniform float _Metal;
@@ -155,8 +155,8 @@ Shader "Custom/SHD_Projection" {
             #include "UnityStandardBRDF.cginc"
             #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
+            #pragma target 2.0
             uniform float _Tiling;
             uniform sampler2D _Texture; uniform float4 _Texture_ST;
             uniform float _Metal;

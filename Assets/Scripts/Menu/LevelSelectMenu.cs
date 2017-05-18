@@ -8,10 +8,10 @@ public class LevelSelectMenu : MonoBehaviour
     public GameObject levelPrefab;
 
     float buttonOffsetX = 110;
-    float buttonOffsetY = 90;
-    float buttonVerticalOffset = 150;
-    int buttonLineCount = 3;
-    int buttonColumnCount = 3;
+    float buttonOffsetY = 100;
+    float buttonVerticalOffset = 0;
+    int buttonLineCount = 1;
+    int buttonColumnCount = 1;
     int currentPage = 0;
 
     List<GameObject> buttons = new List<GameObject>();
@@ -24,17 +24,17 @@ public class LevelSelectMenu : MonoBehaviour
         {
             if (i > PlayerData.competenceNames.Count)
                 break;
-            var b = transform.Find("C" + i.ToString());
+            var b = transform.FindChild("C" + i.ToString());
             if (b == null)
                 break;
             if (!G.Sys.playerData.IsEnabled(PlayerData.competenceNames[i-1]))
                 b.gameObject.SetActive(false);
         }
 
-        var bArrow = transform.Find("Next");
+        var bArrow = transform.FindChild("Next");
         if (bArrow != null)
             nextButton = bArrow.gameObject;
-        bArrow = transform.Find("Previous");
+        bArrow = transform.FindChild("Previous");
         if (bArrow != null)
             previousButton = bArrow.gameObject;
 
@@ -57,10 +57,17 @@ public class LevelSelectMenu : MonoBehaviour
             b.transform.SetParent(transform);
             b.transform.localScale = new Vector3(1, 1, 1);
             b.transform.localPosition = new Vector3(buttonOffsetX * (i % buttonLineCount - ((float)buttonLineCount - 1) / 2), -buttonOffsetY * (i / 3) + buttonVerticalOffset, 0);
-            var child = b.transform.Find("Text");
+            var child = b.transform.FindChild("Text");
+            var child2 = b.transform.FindChild("Text Back");
             if (child != null)
             {
                 var text = child.GetComponent<Text>();
+                if (text != null)
+                    text.text = "Level " + (current + 1);
+            }
+            if (child2 != null)
+            {
+                var text = child2.GetComponent<Text>();
                 if (text != null)
                     text.text = "Level " + (current + 1);
             }
@@ -95,5 +102,10 @@ public class LevelSelectMenu : MonoBehaviour
     {
         currentPage--;
         CreateButtons();
+    }
+
+    public void onReturnMenuClick()
+    {
+        G.Sys.gameManager.LoadScene(G.Sys.gameManager.mainMenuScene);
     }
 }

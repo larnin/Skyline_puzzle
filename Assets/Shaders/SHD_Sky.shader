@@ -3,7 +3,7 @@
 // Shader created with Shader Forge v1.32 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.32;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:0,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:9353,x:32719,y:32712,varname:node_9353,prsc:2|custl-5335-RGB;n:type:ShaderForge.SFN_Tex2d,id:5335,x:32281,y:32835,ptovrint:False,ptlb:Sky,ptin:_Sky,varname:node_5335,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-5728-UVOUT;n:type:ShaderForge.SFN_Panner,id:5728,x:32073,y:32835,varname:node_5728,prsc:2,spu:1,spv:0|UVIN-3546-UVOUT,DIST-139-OUT;n:type:ShaderForge.SFN_Time,id:2505,x:31585,y:32823,varname:node_2505,prsc:2;n:type:ShaderForge.SFN_Multiply,id:139,x:31809,y:32854,varname:node_139,prsc:2|A-2505-T,B-7392-OUT;n:type:ShaderForge.SFN_ValueProperty,id:7392,x:31585,y:32972,ptovrint:False,ptlb:MouvSpeed,ptin:_MouvSpeed,varname:node_7392,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_TexCoord,id:3546,x:31809,y:32706,varname:node_3546,prsc:2,uv:0;proporder:5335-7392;pass:END;sub:END;*/
+/*SF_DATA;ver:1.32;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,lico:1,lgpr:1,limd:0,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:True,fnsp:False,fnfb:False;n:type:ShaderForge.SFN_Final,id:9353,x:32719,y:32712,varname:node_9353,prsc:2|custl-5335-RGB;n:type:ShaderForge.SFN_Tex2d,id:5335,x:32281,y:32835,ptovrint:False,ptlb:Sky,ptin:_Sky,varname:node_5335,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False|UVIN-5728-UVOUT;n:type:ShaderForge.SFN_Panner,id:5728,x:32073,y:32835,varname:node_5728,prsc:2,spu:1,spv:0|UVIN-3546-UVOUT,DIST-139-OUT;n:type:ShaderForge.SFN_Time,id:2505,x:31585,y:32823,varname:node_2505,prsc:2;n:type:ShaderForge.SFN_Multiply,id:139,x:31809,y:32854,varname:node_139,prsc:2|A-2505-T,B-7392-OUT;n:type:ShaderForge.SFN_ValueProperty,id:7392,x:31585,y:32972,ptovrint:False,ptlb:MouvSpeed,ptin:_MouvSpeed,varname:node_7392,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:0;n:type:ShaderForge.SFN_TexCoord,id:3546,x:31809,y:32706,varname:node_3546,prsc:2,uv:0;proporder:5335-7392;pass:END;sub:END;*/
 
 Shader "Custom/SHD_Sky" {
     Properties {
@@ -29,8 +29,8 @@ Shader "Custom/SHD_Sky" {
             #include "UnityCG.cginc"
             #pragma multi_compile_fwdbase_fullshadows
             #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles 
-            #pragma target 3.0
+            #pragma only_renderers d3d9 d3d11 glcore gles gles3 
+            #pragma target 2.0
             uniform float4 _TimeEditor;
             uniform sampler2D _Sky; uniform float4 _Sky_ST;
             uniform float _MouvSpeed;
