@@ -58,7 +58,26 @@ MonoBehaviour:
   pauseMenuPrefab: {fileID: 1609625225396636, guid: 8c181f39ebd1ce3498e65cbab6b57369,
     type: 2}
   levelsName:
-  - Scene
+  - Jules-1-OneWayPlateformeDescendante
+  - Jules-1.5-PlateformeDescenteBlocage
+  - Jules-2-PlateformesMobilesOeilCentral
+  - Jules-3-WormholeSizeLessAccelerate
+  - Jules-4-PlateformeMouvanteZoneMortelles
+  - Jules-5-Teleporters
+  - levelDesignJu_Easy_Accelerator_1
+  - levelDesignJu_Easy_Accelerator_2
+  - levelDesignJu_Easy_Accelerator_3
+  - levelDesignJu_Easy_enigma_1
+  - levelDesignJu_Easy_sizeChange_1
+  - Jules-1-Teleport&Size
+  - Jules-2-OneWayBlockMoving
+  - Jules-3-Labyrinth
+  - LD bounce
+  - levelDesignJu_Moyen_BlockageOrder test
+  - levelDesignJu_Moyen_Enigma
+  - levelDesignJu_Moyen_Trigger
+  - Jules_1
+  - levelDesignJu_Hard
   mainMenuScene: Scenes/MainMenu
   levelSelectScene: Scenes/LevelSelectMenu
   index: 0

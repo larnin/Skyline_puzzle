@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 689640851}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1537,8 +1537,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dieMenuPrefab: {fileID: 0}
   endMenuPrefab: {fileID: 0}
+  pauseMenuPrefab: {fileID: 0}
   levelsName: []
   mainMenuScene: 
+  levelSelectScene: 
   index: 0
 --- !u!4 &1407468342
 Transform:
