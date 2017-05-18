@@ -118,7 +118,7 @@ Prefab:
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
       propertyPath: levelsName.Array.size
-      value: 50
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4674165286553584, guid: 0686c58d8b99a8348bb631c29abd1266, type: 2}
       propertyPath: m_LocalPosition.x
@@ -160,7 +160,7 @@ Prefab:
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
       propertyPath: levelsName.Array.data[2]
-      value: Scene
+      value: Jules-1.5-PlateformeDescenteBlocage
       objectReference: {fileID: 0}
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
@@ -170,7 +170,7 @@ Prefab:
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
       propertyPath: levelsName.Array.data[0]
-      value: levelDesignJu_Easy_sizeChange_1
+      value: Jules-1-OneWayPlateformeDescendante
       objectReference: {fileID: 0}
     - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
         type: 2}
