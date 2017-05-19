@@ -121,6 +121,9 @@ public class Player : MonoBehaviour
             case "End":
                 Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
                 break;
+            case "Collectable":
+                Collect(other.gameObject);
+                break;
             default:
                 break;
         }
@@ -159,8 +162,3 @@ public class Player : MonoBehaviour
         Destroy(collectible);
     }
 }
-
-            case "Collectable":
-                Collect(other.gameObject);
-                break;
-            default:
