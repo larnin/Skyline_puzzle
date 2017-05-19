@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: M_Plateformes3
-  m_Shader: {fileID: 4800000, guid: 2bbbf57a6f39db44c9d53077f82c16a3, type: 3}
+  m_Name: M_Tile1_Moving2
+  m_Shader: {fileID: 4800000, guid: 8a5ebbf38c0206443b0c2b83c6f80ecd, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -17,8 +17,8 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _BoutonMask:
-        m_Texture: {fileID: 2800000, guid: c9bd6be4eefa82e4ebd1dca9701db076, type: 3}
+    - _2:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -37,24 +37,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Diffuse:
-        m_Texture: {fileID: 2800000, guid: 9c423c0559212d94fa5022a03512a712, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Emissive:
-        m_Texture: {fileID: 2800000, guid: e915646416c192149870b0a0d186ce75, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    - _Hexa:
+        m_Texture: {fileID: 2800000, guid: 8517ffc4f44dac8478d678e4d6c4aa6e, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0.24, y: -0.29}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1272083372bd65e42923fef257dd7f17, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Motifs:
+        m_Texture: {fileID: 2800000, guid: 8517ffc4f44dac8478d678e4d6c4aa6e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -65,29 +65,39 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 4dc09e9c125530742b5e9176d48e94bb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0.52, y: -0.51}
     m_Floats:
+    - _ApparitionMotifs: 0
     - _BumpScale: 1
-    - _Button: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissiveColorBool: 0
-    - _EmissiveStrength: 0.642
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.161
     - _GlossyReflections: 1
+    - _HexaEmissive: 1
+    - _Metal: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Roughness: 1
     - _SmoothnessTextureChannel: 0
+    - _Specular: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Tiling: 0.22
     - _UVSec: 0
     - _ZWrite: 1
+    - _node_7596: 0
+    - _xoffset: 0.12
+    - _yoffset: 0
     m_Colors:
-    - _BaseColor: {r: 0.875, g: 0, b: 0, a: 1}
-    - _BoutonActivated: {r: 1, g: 0, b: 0.31034467, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HexaBaseColor: {r: 0.5803922, g: 0, b: 0.1333333, a: 1}
+    - _HexaEmissiveColor: {r: 1, g: 0.16078432, b: 0.29411766, a: 1}
+    - _MotifColor: {r: 0, g: 1, b: 0.9117646, a: 1}

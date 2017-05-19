@@ -109,6 +109,10 @@ public class Player : MonoBehaviour
                 break;
             case "Trigger":
                 other.gameObject.GetComponent<Trigger>().ActivatedElement.GetComponent<ActivatedElement>().Activate();
+                if (other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.GetFloat("_Button") == 0)
+                    other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetFloat("_Button", 1);
+                else
+                    other.gameObject.transform.GetChild(0).GetComponent<Renderer>().material.SetFloat("_Button", 0);
                 break;
             case "KillGrid":
                 _animator.SetBool("Death", true);
@@ -116,9 +120,6 @@ public class Player : MonoBehaviour
                 break;
             case "End":
                 Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
-                break;
-            case "Collectable":
-                Collect(other.gameObject);
                 break;
             default:
                 break;
@@ -158,3 +159,8 @@ public class Player : MonoBehaviour
         Destroy(collectible);
     }
 }
+
+            case "Collectable":
+                Collect(other.gameObject);
+                break;
+            default:

@@ -115,6 +115,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.size
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4674165286553584, guid: 0686c58d8b99a8348bb631c29abd1266, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -146,6 +151,86 @@ Prefab:
     - target: {fileID: 4674165286553584, guid: 0686c58d8b99a8348bb631c29abd1266, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[4]
+      value: jumedium
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[5]
+      value: levelDesignJu_Easy_Accelerator_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[8]
+      value: Jules-3-Labyrinth
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[7]
+      value: Jules-2-OneWayBlockMoving
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[9]
+      value: levelDesignJu_Moyen_BlockageOrder test
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[10]
+      value: levelDesignJu_Moyen_Enigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[11]
+      value: levelDesignJu_Moyen_Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[12]
+      value: Jules_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[13]
+      value: LD Bounce 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[14]
+      value: levelDesignJu_Hard
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[15]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[16]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[17]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[18]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[19]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114575257858818148, guid: 0686c58d8b99a8348bb631c29abd1266,
+        type: 2}
+      propertyPath: levelsName.Array.data[6]
+      value: Jules-1-Teleport&Size
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0686c58d8b99a8348bb631c29abd1266, type: 2}
