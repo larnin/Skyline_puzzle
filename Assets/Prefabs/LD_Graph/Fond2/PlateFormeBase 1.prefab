@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33675276185489268}
   - component: {fileID: 23218912821239970}
   - component: {fileID: 95666682026470558}
-  - component: {fileID: 65055407666612686}
   m_Layer: 0
   m_Name: PlateFormeBase 1
   m_TagString: Untagged
@@ -56,7 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2bf183b4cf59a8445a99d25d07fc99e6, type: 2}
+  - {fileID: 2100000, guid: 9f2fd1e251152404499e27470d6acdc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,18 +81,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264624635532284}
   m_Mesh: {fileID: 4300000, guid: 62cbcc5cd654c66458c7ad563f2b4721, type: 3}
---- !u!65 &65055407666612686
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1264624635532284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000002, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95666682026470558
 Animator:
   serializedVersion: 3
