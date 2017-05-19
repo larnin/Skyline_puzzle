@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: b1a42867b939d384598b5a4b51d451cd
   - enabled: 1
     path: Assets/Scenes/Base.unity
     guid: 85aeae470dba8524b8edd0407549093e
@@ -16,7 +13,7 @@ EditorBuildSettings:
     guid: 25f081405c200154b85c77daab077ddd
   - enabled: 1
     path: Assets/Scenes/LevelSelectMenu.unity
-    guid: 93e228e0368506d4ca05d8d030ee8fce
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/LD/Simple/Jules-1.5-PlateformeDescenteBlocage.unity
     guid: ee6300d7429dddb4582311fbc7b3ec05
@@ -27,38 +24,23 @@ EditorBuildSettings:
     path: Assets/Scenes/LD/Simple/Jules-2-PlateformesMobilesOeilCentral.unity
     guid: 3f37dabf9c0f77b4fa9dbbf3220fd164
   - enabled: 1
+    path: Assets/Scenes/LD/Simple/Jules-3-WormholeSizeLessAccelerate.unity
+    guid: 50b0b0ba9382b94448f7130b53d24a30
+  - enabled: 1
+    path: Assets/Scenes/LD/Simple/Jules-4-PlateformeMouvanteZoneMortelles.unity
+    guid: 4a62db64629ed2d429223de81e74a3f1
+  - enabled: 1
     path: Assets/Scenes/LD/Simple/Jules-5-Teleporters.unity
     guid: 635963c326cc8d14d8f726d672602308
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/LD/Simple/jumedium.unity
+    guid: f58ff4e53a15fea49ac72a9b2b023ea3
+  - enabled: 1
     path: Assets/Scenes/LD/Simple/levelDesignJu_Easy_Accelerator_1.unity
     guid: e0ddbf8df26937642abe80b65bb0d700
   - enabled: 1
-    path: Assets/Scenes/LD/Moyen/Jules-1-Teleport&Size.unity
-    guid: 2a926cc81fb18304e991397c17149d46
-  - enabled: 1
-    path: Assets/Scenes/LD/Moyen/Jules-2-OneWayBlockMoving.unity
-    guid: 41454a4fbba925745b0ba575c02ae334
-  - enabled: 1
-    path: Assets/Scenes/LD/Moyen/Jules-3-Labyrinth.unity
-    guid: 0e51b8b30ba473e40a37170f78fb2c3a
-  - enabled: 1
-    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_BlockageOrder test.unity
-    guid: b5db4d40def58104a9f55487f5883f67
-  - enabled: 1
-    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_Enigma.unity
-    guid: 645580616f11d0c45a3b904dd3db81e4
-  - enabled: 1
-    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_Trigger.unity
-    guid: 543c56de977e77343a589af0e4c0d433
-  - enabled: 1
     path: Assets/Scenes/LD/Simple/levelDesignJu_Easy_Accelerator_2.unity
     guid: 3f0731d237ad17143b135a9b4c8361c3
-  - enabled: 1
-    path: Assets/Scenes/LD/Difficile/Jules_1.unity
-    guid: d959a6fa8ba588e40ac655575935f884
-  - enabled: 1
-    path: Assets/Scenes/LD/Difficile/levelDesignJu_Hard.unity
-    guid: e2206c04c7963d84f936a4ebcba78d33
   - enabled: 1
     path: Assets/Scenes/LD/Simple/levelDesignJu_Easy_Accelerator_3.unity
     guid: f7cd5e990540c0c4197e70a072251d54
@@ -69,5 +51,32 @@ EditorBuildSettings:
     path: Assets/Scenes/LD/Simple/levelDesignJu_Easy_sizeChange_1.unity
     guid: dbbcbd9a233b09947aad20a079c6cd18
   - enabled: 1
+    path: Assets/Scenes/LD/Moyen/Jules-1-Teleport&Size.unity
+    guid: 2a926cc81fb18304e991397c17149d46
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/Jules-2-OneWayBlockMoving.unity
+    guid: 41454a4fbba925745b0ba575c02ae334
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/Jules-3-Labyrinth.unity
+    guid: 0e51b8b30ba473e40a37170f78fb2c3a
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/LD bounce.unity
+    guid: 42911e552c042d44ead02252bfbb9fbe
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_BlockageOrder test.unity
+    guid: b5db4d40def58104a9f55487f5883f67
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_Enigma.unity
+    guid: 645580616f11d0c45a3b904dd3db81e4
+  - enabled: 1
+    path: Assets/Scenes/LD/Moyen/levelDesignJu_Moyen_Trigger.unity
+    guid: 543c56de977e77343a589af0e4c0d433
+  - enabled: 1
+    path: Assets/Scenes/LD/Difficile/Jules_1.unity
+    guid: d959a6fa8ba588e40ac655575935f884
+  - enabled: 1
     path: Assets/Scenes/LD/Difficile/LD Bounce 2.unity
     guid: 40ff34267614a4b408a4627af068311a
+  - enabled: 1
+    path: Assets/Scenes/LD/Difficile/levelDesignJu_Hard.unity
+    guid: e2206c04c7963d84f936a4ebcba78d33
