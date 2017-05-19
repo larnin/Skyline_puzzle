@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public GameObject FxClosed;
     public Material scarfMaterial;
+    public Material persoMaterial;
+    public List<Texture> persoTextures;
 
     new Rigidbody rigidbody;
     int size = 1;
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
                     mat.bounciness = bouciness;
                 }
             }
+            persoMaterial.mainTexture = persoTextures[1];
         }
         else if(G.Sys.playerData.CurrentCompetence == "Faster")
         {
@@ -54,6 +57,7 @@ public class Player : MonoBehaviour
             BaseDrag /= fasterMultiplier;
             AcceleratorDrag /= fasterMultiplier;
             DecceleratorDrag /= fasterMultiplier;
+            persoMaterial.mainTexture = persoTextures[2];
         }
         else if(G.Sys.playerData.CurrentCompetence == "Slower")
         {
@@ -62,10 +66,12 @@ public class Player : MonoBehaviour
             BaseDrag /= slowerMultiplier;
             AcceleratorDrag /= slowerMultiplier;
             DecceleratorDrag /= slowerMultiplier;
+            persoMaterial.mainTexture = persoTextures[3];
         }
         else if(G.Sys.playerData.CurrentCompetence == "Normal")
         {
             scarfMaterial.color = new Color(255, 0, 164);
+            persoMaterial.mainTexture = persoTextures[0];
         }
 	}
 	

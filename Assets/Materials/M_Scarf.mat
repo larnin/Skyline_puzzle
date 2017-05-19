@@ -92,6 +92,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.97794116, g: 0.035953693, b: 0.6011465, a: 1}
-    - _Color: {r: 78, g: 76, b: 73, a: 1}
+    - _Color: {r: 255, g: 227, b: 218, a: 1}
     - _Direction: {r: 0, g: 0.691, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
