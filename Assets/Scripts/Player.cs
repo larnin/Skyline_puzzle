@@ -80,10 +80,12 @@ public class Player : MonoBehaviour
             case "End":
                 Event<EndLevelEvent>.Broadcast(new EndLevelEvent());
                 break;
+            case "Collectable":
+                Collect(other.gameObject);
+                break;
             default:
                 break;
         }
-
     }
 
     private void OnTriggerExit(Collider other)
@@ -110,5 +112,11 @@ public class Player : MonoBehaviour
 
                 break;
         }
+    }
+
+    void Collect(GameObject collectible)
+    {
+        G.Sys.playerData.Money++;
+        Destroy(collectible);
     }
 }
