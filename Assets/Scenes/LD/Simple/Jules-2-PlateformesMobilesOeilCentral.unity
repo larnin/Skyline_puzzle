@@ -2020,11 +2020,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4190275108869002, guid: 7437750b6b77cc7438a41bd8b01654fb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4190275108869002, guid: 7437750b6b77cc7438a41bd8b01654fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.18
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4190275108869002, guid: 7437750b6b77cc7438a41bd8b01654fb, type: 2}
       propertyPath: m_LocalPosition.z

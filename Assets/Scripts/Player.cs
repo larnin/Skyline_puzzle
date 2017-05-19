@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float DecceleratorDrag = 6f;
     public float GravityAttract = 35f;
 
+    public GameObject FxClosed;
+
     new Rigidbody rigidbody;
     int size = 1;
     float BaseDrag;
@@ -95,6 +97,8 @@ public class Player : MonoBehaviour
                 break;
             case "OneWay":
                 other.GetComponent<BoxCollider>().isTrigger = false;
+                other.transform.GetChild(0).gameObject.SetActive(false);
+                other.transform.GetChild(1).gameObject.SetActive(true);
                 break;
             case "Accelerator":
             case "Deccelerator":

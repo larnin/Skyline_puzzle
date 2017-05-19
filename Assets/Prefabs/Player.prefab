@@ -995,6 +995,7 @@ MonoBehaviour:
   AcceleratorDrag: 0
   DecceleratorDrag: 8
   GravityAttract: 35
+  FxClosed: {fileID: 1510764154175636, guid: 2ba95d858f4d3f548a49b6f050ebcd98, type: 2}
 --- !u!135 &135514451067949440
 SphereCollider:
   m_ObjectHideFlags: 1

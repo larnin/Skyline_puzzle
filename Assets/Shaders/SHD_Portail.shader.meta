@@ -1,11 +1,12 @@
 fileFormatVersion: 2
 guid: 98e5796faede66844b7826f62958332e
-timeCreated: 1495141167
+timeCreated: 1495141921
 licenseType: Free
 ShaderImporter:
   defaultTextures:
   - _PolarUV: {fileID: 2800000, guid: 427a3dfc4c6193645a3ece63fc4d3487, type: 3}
   - _BaseTex: {fileID: 2800000, guid: dc0ed4751b4c1d3489207e66f4aef890, type: 3}
+  - _Alpha: {fileID: 2800000, guid: 3a869c7c409fe1a4781ed0d438f4cb82, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
