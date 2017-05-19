@@ -50,7 +50,7 @@ public class PlayerData
         competences.Add("Bouncy");
         competences.Add("Faster");
         competences.Add("Slower");
-        competences.Add("One life");
+        //competences.Add("One life");
 
         return competences;
     }
@@ -108,6 +108,6 @@ public class PlayerData
         _money = 0;
         _competenceEnabled.Clear();
         foreach (var c in competenceNames)
-            _competenceEnabled.Add(c == "Normal");
+            _competenceEnabled.Add(true);
     }
 }

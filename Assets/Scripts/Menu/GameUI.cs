@@ -8,12 +8,16 @@ public class GameUI : MonoBehaviour
     Text _countdown;
     Button _pauseButton;
     SubscriberList _subscriberList = new SubscriberList();
+    int _value = 0;
+    Text _money;
+    Text _moneyBack;
 
     void Awake()
     {
         _subscriberList.Add(new Event<StartCountdownEvent>.Subscriber(onCountdownStart));
         _subscriberList.Add(new Event<PauseEvent>.Subscriber(onPause));
         _subscriberList.Add(new Event<EndLevelEvent>.Subscriber(onPlayerFinish));
+        _subscriberList.Add(new Event<CollectEvent>.Subscriber(onCollect));
         _subscriberList.Subscribe();
     }
 
@@ -34,6 +38,19 @@ public class GameUI : MonoBehaviour
             _pauseButton = pauseObj.GetComponent<Button>();
         if (_pauseButton != null)
             _pauseButton.gameObject.SetActive(false);
+
+        var text = transform.Find("MoneyBack");
+        if (text != null)
+        {
+            _money = text.GetComponent<Text>();
+            _money.text = _value.ToString();
+        }
+        text = transform.Find("Money");
+        if (text != null)
+        {
+            _moneyBack = text.GetComponent<Text>();
+            _moneyBack.text = _value.ToString();
+        }
     }
 	
     IEnumerator execCountdown()
@@ -67,5 +84,12 @@ public class GameUI : MonoBehaviour
     void onPlayerFinish(EndLevelEvent e)
     {
         _pauseButton.gameObject.SetActive(false);
+    }
+
+    void onCollect(CollectEvent e)
+    {
+        _value++;
+        _money.text = _value.ToString();
+        _moneyBack.text = _value.ToString();
     }
 }

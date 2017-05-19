@@ -6,15 +6,17 @@ using UnityEngine.UI;
 public class LevelSelectMenu : MonoBehaviour
 {
     public GameObject levelPrefab;
+    public List<Sprite> sprites;
 
     float buttonOffsetX = 110;
     float buttonOffsetY = 100;
-    float buttonVerticalOffset = 0;
+    float buttonVerticalOffset = 1;
     int buttonLineCount = 1;
     int buttonColumnCount = 1;
     int currentPage = 0;
 
     List<GameObject> buttons = new List<GameObject>();
+    List<Image> capacitySprites = new List<Image>();
     GameObject nextButton;
     GameObject previousButton;
 
@@ -29,7 +31,11 @@ public class LevelSelectMenu : MonoBehaviour
                 break;
             if (!G.Sys.playerData.IsEnabled(PlayerData.competenceNames[i-1]))
                 b.gameObject.SetActive(false);
+            var bSprite = b.Find("Image");
+            if (bSprite != null)
+                capacitySprites.Add(bSprite.GetComponent<Image>());
         }
+        UpdateCapacities();
 
         var bArrow = transform.Find("Next");
         if (bArrow != null)
@@ -82,6 +88,16 @@ public class LevelSelectMenu : MonoBehaviour
         previousButton.SetActive(currentPage > 0);
     }
 
+    void UpdateCapacities()
+    {
+        for(int i = 0; i < capacitySprites.Count; i++)
+        {
+            if (i == PlayerData.competenceNames.IndexOf(G.Sys.playerData.CurrentCompetence))
+                capacitySprites[i].sprite = sprites[2 * i + 1];
+            else capacitySprites[i].sprite = sprites[2 * i];
+        }
+    }
+
     public void onLevelButtonClick(int value)
     {
         G.Sys.gameManager.LoadLevel(value);
@@ -90,6 +106,7 @@ public class LevelSelectMenu : MonoBehaviour
     public void onCompetenceSelect(int index)
     {
         G.Sys.playerData.CurrentCompetence = PlayerData.competenceNames[index];
+        UpdateCapacities();
     }
 
     public void onNextClick()

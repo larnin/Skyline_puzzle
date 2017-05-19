@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float fasterMultiplier = 1.25f;
+    public float slowerMultiplier = 0.75f;
+    public float bouciness = 0.8f;
+
     public float AcceleratorDrag = 1f;
     public float DecceleratorDrag = 6f;
     public float GravityAttract = 35f;
 
     public GameObject FxClosed;
+    public Material scarfMaterial;
 
     new Rigidbody rigidbody;
     int size = 1;
@@ -20,8 +25,6 @@ public class Player : MonoBehaviour
     void Awake()
     {
         G.Sys.player = this;
-        rigidbody = GetComponent<Rigidbody>();
-        BaseDrag = rigidbody.drag;
     }
 
 	void Start ()
@@ -29,13 +32,47 @@ public class Player : MonoBehaviour
         var perso = transform.Find("Perso");
         if (perso != null)
             _animator = perso.GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
+        BaseDrag = rigidbody.drag;
+        if(G.Sys.playerData.CurrentCompetence == "Bouncy")
+        {
+            scarfMaterial.color = new Color(255, 151, 0);
+            var collider = GetComponent<Collider>();
+            if(collider != null)
+            {
+                var mat = collider.material;
+                if(mat != null)
+                {
+                    mat.bounciness = bouciness;
+                }
+            }
+        }
+        else if(G.Sys.playerData.CurrentCompetence == "Faster")
+        {
+            scarfMaterial.color = new Color(255,227,218);
+            rigidbody.drag /= fasterMultiplier;
+            BaseDrag /= fasterMultiplier;
+            AcceleratorDrag /= fasterMultiplier;
+            DecceleratorDrag /= fasterMultiplier;
+        }
+        else if(G.Sys.playerData.CurrentCompetence == "Slower")
+        {
+            scarfMaterial.color = new Color(78, 76, 73);
+            rigidbody.drag /= slowerMultiplier;
+            BaseDrag /= slowerMultiplier;
+            AcceleratorDrag /= slowerMultiplier;
+            DecceleratorDrag /= slowerMultiplier;
+        }
+        else if(G.Sys.playerData.CurrentCompetence == "Normal")
+        {
+            scarfMaterial.color = new Color(255, 0, 164);
+        }
 	}
 	
 	void Update ()
     {
         if(rigidbody.velocity.magnitude > 0.01)
             rigidbody.MoveRotation(Quaternion.LookRotation(new Vector3(0, 0, 1), -rigidbody.velocity));
-        //transform.up = - rigidbody.velocity;
 	}
 
     private void OnTriggerEnter(Collider other)
@@ -116,6 +153,7 @@ public class Player : MonoBehaviour
 
     void Collect(GameObject collectible)
     {
+        Event<CollectEvent>.Broadcast(new CollectEvent());
         G.Sys.playerData.Money++;
         Destroy(collectible);
     }

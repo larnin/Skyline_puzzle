@@ -992,17 +992,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 648e2cb033cd60f408d4037f47684b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fasterMultiplier: 1.5
+  slowerMultiplier: 0.6
+  bouciness: 1
   AcceleratorDrag: 0
   DecceleratorDrag: 8
   GravityAttract: 35
   FxClosed: {fileID: 1510764154175636, guid: 2ba95d858f4d3f548a49b6f050ebcd98, type: 2}
+  scarfMaterial: {fileID: 2100000, guid: 8c2e07ab67c5ef2458e6aedf95b8b4d6, type: 2}
 --- !u!135 &135514451067949440
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036940438932716}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b502ddf9f56925c48ab9e2082643ccdf, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
