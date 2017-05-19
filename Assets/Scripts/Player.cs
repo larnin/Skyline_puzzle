@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject collectibleOff;
     public float fasterMultiplier = 1.25f;
     public float slowerMultiplier = 0.75f;
     public float bouciness = 0.8f;
@@ -165,6 +166,9 @@ public class Player : MonoBehaviour
     {
         Event<CollectEvent>.Broadcast(new CollectEvent());
         G.Sys.playerData.Money++;
+        var c = Instantiate(collectibleOff);
+        c.transform.position = collectible.transform.position;
         Destroy(collectible);
+        Destroy(c, 2);
     }
 }
